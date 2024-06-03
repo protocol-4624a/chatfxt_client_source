@@ -111,7 +111,7 @@ export default function Home() {
         <title>OpenFXT - ChatFXT</title>
         <meta name="description" content="LangChain documentation chatbot" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://openfxt.vercel.app/images/favicon.png" />
       </Head>
       <div className={styles.topnav}>
         <div className={styles.navlogo}>
