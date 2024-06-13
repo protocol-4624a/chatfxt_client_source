@@ -100,7 +100,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetch('https://script.google.com/macros/s/AKfycbzR19jkkE5B75g7DGMI9PPmJ2erBrY2RjzyPQ8MgWr9v_Aakw4ULLRfxD_Vk7O-UtKP/exec?action=openfxt')
+    fetch('https://script.google.com/macros/s/AKfycbzR19jkkE5B75g7DGMI9PPmJ2erBrY2RjzyPQ8MgWr9v_Aakw4ULLRfxD_Vk7O-UtKP/exec?action=chatfxt')
       .catch(error => {
         console.error('Error:', error);
       });
