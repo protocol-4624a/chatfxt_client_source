@@ -62,15 +62,15 @@ export default function Home() {
     let respData = "Questions have a processing time exceeding 10s, which is the model's waiting time limit (This is the disadvantage of this free model, because it is deployed on a free server, it has limited features, if If you are interested and want to cooperate with the author to share the cost of upgrading the server, please visit `https://openfxt.vercel.app`), please try again with another question.";
     try {
       const response = await fetch("https://backend.ptchat.net/api/v2/detail_response", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
 
-    setUserInput("");
-    respData = await response.text();
+      setUserInput("");
+      respData = await response.text();
     }
     catch (error) {
       setUserInput("");
@@ -98,6 +98,13 @@ export default function Home() {
       e.preventDefault();
     }
   };
+
+  useEffect(() => {
+    fetch('https://script.google.com/macros/s/AKfycbzR19jkkE5B75g7DGMI9PPmJ2erBrY2RjzyPQ8MgWr9v_Aakw4ULLRfxD_Vk7O-UtKP/exec?action=openfxt')
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
 
   useEffect(() => {
     if (messages.length >= 3) {
